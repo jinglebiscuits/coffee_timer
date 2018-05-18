@@ -12,6 +12,8 @@ import android.util.Log;
 
 public class QuickTimerService extends TileService {
 
+    private final String LOG_TAG = getClass().getSimpleName();
+
     public QuickTimerService() {
         super();
     }
@@ -43,7 +45,7 @@ public class QuickTimerService extends TileService {
 
     @Override
     public void onClick() {
-        Log.d(this.getClass().getSimpleName(), "Start the timer");
+        Log.d(LOG_TAG, "Start the timer");
         super.onClick();
         Intent intent = new Intent(AlarmClock.ACTION_SET_TIMER)
           .putExtra(AlarmClock.EXTRA_LENGTH, 240)
