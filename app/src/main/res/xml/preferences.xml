@@ -1,0 +1,9 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="timer_length"
+        android:title="Timer length"
+        android:summary="4:00">
+    </Preference>
+
+</PreferenceScreen>
