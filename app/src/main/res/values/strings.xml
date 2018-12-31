@@ -75,4 +75,5 @@
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
+    <string name="timer_length_settings_key">timer_length</string>
 </resources>

@@ -1,9 +1,9 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <Preference
-        android:key="timer_length"
+    <TimePickerDialog
+        android:key="@string/timer_length_settings_key"
         android:title="Timer length"
         android:summary="4:00">
-    </Preference>
+    </TimePickerDialog>
 
 </PreferenceScreen>
