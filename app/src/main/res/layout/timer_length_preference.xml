@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="1"
-        android:id="@+id/editText1"/>
+        android:id="@+id/minute_digit_2"/>
     <EditText
         android:text="5"
         style="@style/TextAppearance.MaterialComponents.Body1"
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="1"
-        android:id="@+id/editText2"/>
+        android:id="@+id/minute_digit_1"/>
 
     <TextView
         android:text=":"
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="1"
-        android:id="@+id/editText3"/>
+        android:id="@+id/second_digit_2"/>
 
     <EditText
         android:text="3"
@@ -44,5 +44,5 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="1"
-        android:id="@+id/editText4"/>
+        android:id="@+id/second_digit_1"/>
 </LinearLayout>
