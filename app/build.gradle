@@ -25,6 +25,7 @@ dependencies {
     })
     implementation group: 'androidx.appcompat', name: 'appcompat', version: '1.0.2'
     implementation group: 'androidx.preference', name: 'preference', version: '1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
 }
