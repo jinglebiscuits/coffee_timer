@@ -32,6 +32,7 @@ public class TimerLengthPreference extends DialogPreference {
         if (shouldPersist()) {
             time = getPersistedInt(time);
         }
+        setSummary(getSummaryString());
         setDefaultValue(shouldPersist() ? getPersistedInt(time) : (int) defaultValue);
     }
 
@@ -48,7 +49,16 @@ public class TimerLengthPreference extends DialogPreference {
         this.time = time;
         persistInt(time);
         SharedPreferences sharedPreferences = getSharedPreferences();
+        setSummary(getSummaryString());
         Log.d("coffeetime", "key: " + sharedPreferences.getAll().keySet().toString());
     }
 
+    private String getSummaryString() {
+        String minutes = String.valueOf(time / 60);
+        String seconds = String.valueOf(time % 60);
+        if (seconds.length() == 1) {
+            seconds = "0" + seconds;
+        }
+        return minutes + ":" + seconds;
+    }
 }
