@@ -26,7 +26,7 @@
 
         <service
             android:name=".services.QuickTimerService"
-            android:icon="@drawable/ic_coffee"
+            android:icon="@drawable/ic_coffee_time_icon_plain"
             android:label="@string/timer_tile_label"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>

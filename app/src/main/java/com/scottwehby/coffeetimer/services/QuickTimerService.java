@@ -52,7 +52,8 @@ public class QuickTimerService extends TileService {
         Intent intent = new Intent(AlarmClock.ACTION_SET_TIMER)
           .putExtra(AlarmClock.EXTRA_LENGTH, timerLength)
           .putExtra(AlarmClock.EXTRA_SKIP_UI, true)
-          .putExtra(AlarmClock.EXTRA_MESSAGE, "Coffee Time");
+          .putExtra(AlarmClock.EXTRA_MESSAGE, "Coffee Time")
+          .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
