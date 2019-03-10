@@ -6,8 +6,10 @@ import android.provider.AlarmClock;
 import android.service.quicksettings.TileService;
 import android.util.Log;
 
+import androidx.preference.PreferenceManager;
+
 /**
- Created by scottwehby on 9/10/17.
+ * Created by scottwehby on 9/10/17.
  */
 
 public class QuickTimerService extends TileService {
@@ -45,10 +47,10 @@ public class QuickTimerService extends TileService {
 
     @Override
     public void onClick() {
-        Log.d(LOG_TAG, "Start the timer");
         super.onClick();
+        int timerLength = PreferenceManager.getDefaultSharedPreferences(this).getInt("timer_length", 240);
         Intent intent = new Intent(AlarmClock.ACTION_SET_TIMER)
-          .putExtra(AlarmClock.EXTRA_LENGTH, 240)
+          .putExtra(AlarmClock.EXTRA_LENGTH, timerLength)
           .putExtra(AlarmClock.EXTRA_SKIP_UI, true)
           .putExtra(AlarmClock.EXTRA_MESSAGE, "Coffee Time");
         if (intent.resolveActivity(getPackageManager()) != null) {
