@@ -7,11 +7,12 @@ import android.view.View;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
+import androidx.preference.DialogPreference;
 import androidx.preference.PreferenceDialogFragmentCompat;
 
 public class TimePickerDialog extends PreferenceDialogFragmentCompat {
 
-    private EditText minuteDigit1, minuteDigit2, secondDigit1, secondDigit2;
+    private EditText minuteDigit, secondDigit;
     private int minutes;
     private int seconds;
 
@@ -24,18 +25,33 @@ public class TimePickerDialog extends PreferenceDialogFragmentCompat {
     @Override
     public void onDialogClosed(boolean positiveResult) {
         Log.d("CoffeeTime", "jedi");
-        minutes = Integer.valueOf(minuteDigit2.getText().toString() + minuteDigit1.getText().toString());
-        seconds = Integer.valueOf(secondDigit2.getText().toString() + secondDigit1.getText().toString());
+        // TODO: 3/9/19 null check
+        if (!minuteDigit.getText().toString().isEmpty()) {
+            minutes = Integer.valueOf(minuteDigit.getText().toString());
+        }
+        if (!secondDigit.getText().toString().isEmpty()) {
+            seconds = Integer.valueOf(secondDigit.getText().toString());
+        }
+        DialogPreference dialogPreference = getPreference();
+        if (dialogPreference instanceof TimerLengthPreference) {
+            if (positiveResult) {
+                ((TimerLengthPreference)dialogPreference).setTime(minutes * 60 + seconds);
+            }
+        }
         Log.d("CoffeeTime", "Coffee Time is set to " + minutes + ":" + seconds);
     }
 
     @Override
     protected void onBindDialogView(View view) {
         super.onBindDialogView(view);
-        minuteDigit1 = view.findViewById(R.id.minute_digit_1);
-        minuteDigit2 = view.findViewById(R.id.minute_digit_2);
-        secondDigit1 = view.findViewById(R.id.second_digit_1);
-        secondDigit2 = view.findViewById(R.id.second_digit_2);
+        DialogPreference dialogPreference = getPreference();
+        if (dialogPreference instanceof TimerLengthPreference) {
+            int time = ((TimerLengthPreference)dialogPreference).getTime();
+            minuteDigit = view.findViewById(R.id.minute_digit);
+            secondDigit = view.findViewById(R.id.second_digit);
+            minuteDigit.setText(String.valueOf(time / 60));
+            secondDigit.setText(String.valueOf(time % 60));
+        }
     }
 
 }

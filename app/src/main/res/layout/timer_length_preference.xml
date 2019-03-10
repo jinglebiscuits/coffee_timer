@@ -10,16 +10,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:ems="1"
-        android:id="@+id/minute_digit_2"/>
-    <EditText
-        android:text="5"
-        style="@style/TextAppearance.MaterialComponents.Body1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="1"
-        android:id="@+id/minute_digit_1"/>
+        android:ems="2"
+        android:maxLength="2"
+        android:id="@+id/minute_digit"/>
 
     <TextView
         android:text=":"
@@ -29,20 +22,12 @@
         android:id="@+id/textView"/>
 
     <EditText
-        android:text="6"
-        style="@style/TextAppearance.MaterialComponents.Body1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="1"
-        android:id="@+id/second_digit_2"/>
-
-    <EditText
         android:text="3"
         style="@style/TextAppearance.MaterialComponents.Body1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:ems="1"
-        android:id="@+id/second_digit_1"/>
+        android:ems="2"
+        android:maxLength="2"
+        android:id="@+id/second_digit"/>
 </LinearLayout>
