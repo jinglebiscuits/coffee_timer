@@ -2,7 +2,6 @@ package com.scottwehby.coffeetimer;
 
 import android.app.Dialog;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -24,8 +23,6 @@ public class TimePickerDialog extends PreferenceDialogFragmentCompat {
 
     @Override
     public void onDialogClosed(boolean positiveResult) {
-        Log.d("CoffeeTime", "jedi");
-        // TODO: 3/9/19 null check
         if (!minuteDigit.getText().toString().isEmpty()) {
             minutes = Integer.valueOf(minuteDigit.getText().toString());
         }
@@ -38,7 +35,6 @@ public class TimePickerDialog extends PreferenceDialogFragmentCompat {
                 ((TimerLengthPreference)dialogPreference).setTime(minutes * 60 + seconds);
             }
         }
-        Log.d("CoffeeTime", "Coffee Time is set to " + minutes + ":" + seconds);
     }
 
     @Override
@@ -53,5 +49,4 @@ public class TimePickerDialog extends PreferenceDialogFragmentCompat {
             secondDigit.setText(String.valueOf(time % 60));
         }
     }
-
 }

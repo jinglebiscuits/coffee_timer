@@ -4,11 +4,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
-import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.preference.DialogPreference;
-import androidx.preference.Preference;
 
 public class TimerLengthPreference extends DialogPreference {
 
@@ -33,7 +31,7 @@ public class TimerLengthPreference extends DialogPreference {
             time = getPersistedInt(time);
         }
         setSummary(getSummaryString());
-        setDefaultValue(shouldPersist() ? getPersistedInt(time) : (int) defaultValue);
+        setDefaultValue(shouldPersist() ? getPersistedInt(time) : (int)defaultValue);
     }
 
     @Override
@@ -50,7 +48,6 @@ public class TimerLengthPreference extends DialogPreference {
         persistInt(time);
         SharedPreferences sharedPreferences = getSharedPreferences();
         setSummary(getSummaryString());
-        Log.d("coffeetime", "key: " + sharedPreferences.getAll().keySet().toString());
     }
 
     private String getSummaryString() {
