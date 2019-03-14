@@ -5,27 +5,27 @@
     android:width="24dp">
     <path
         android:fillAlpha="0.9898477"
-        android:fillColor="@color/colorPrimary"
+        android:fillColor="@color/colorPrimaryDark"
         android:pathData="M34.231,37.624h31.538v31.538h-31.538z"
         android:strokeWidth="0.26458332"/>
     <path
         android:fillColor="#00000000"
         android:pathData="m65.54,43.353c11.512,0.547 7.023,13.611 -1.27,19.444"
         android:strokeAlpha="1"
-        android:strokeColor="@color/colorPrimary"
+        android:strokeColor="@color/colorPrimaryDark"
         android:strokeLineCap="butt"
         android:strokeLineJoin="miter"
         android:strokeWidth="4"/>
     <path
         android:fillAlpha="0.9898477"
-        android:fillColor="@color/colorPrimary"
+        android:fillColor="@color/colorPrimaryDark"
         android:pathData="m26.412,68.658a1.412,2 0,0 0,-1.223 1,1.412 2,0 0,0 0,2 1.412,2 0,0 0,1.223 1h47.176a1.412,2 0,0 0,1.412 -2,1.412 2,0 0,0 -1.412,-2z"
         android:strokeWidth="0.22986245"/>
     <path
         android:fillColor="#00000000"
         android:pathData="M48.291,36.041C58.357,24.926 42.783,27.674 50.363,15.395"
         android:strokeAlpha="1"
-        android:strokeColor="@color/colorPrimary"
+        android:strokeColor="@color/colorPrimaryDark"
         android:strokeLineCap="butt"
         android:strokeLineJoin="miter"
         android:strokeWidth="2"/>
@@ -33,7 +33,7 @@
         android:fillColor="#00000000"
         android:pathData="M38.292,36.041C48.357,24.926 32.784,27.674 40.363,15.395"
         android:strokeAlpha="1"
-        android:strokeColor="@color/colorPrimary"
+        android:strokeColor="@color/colorPrimaryDark"
         android:strokeLineCap="butt"
         android:strokeLineJoin="miter"
         android:strokeWidth="2"/>
@@ -41,7 +41,7 @@
         android:fillColor="#00000000"
         android:pathData="M58.292,36.041C68.357,24.926 52.784,27.674 60.363,15.395"
         android:strokeAlpha="1"
-        android:strokeColor="@color/colorPrimary"
+        android:strokeColor="@color/colorPrimaryDark"
         android:strokeLineCap="butt"
         android:strokeLineJoin="miter"
         android:strokeWidth="2"/>
