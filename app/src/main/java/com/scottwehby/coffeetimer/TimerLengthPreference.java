@@ -10,7 +10,7 @@ import androidx.preference.DialogPreference;
 
 public class TimerLengthPreference extends DialogPreference {
 
-    private int time = 0;
+    private int time = 240;
 
     public TimerLengthPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
