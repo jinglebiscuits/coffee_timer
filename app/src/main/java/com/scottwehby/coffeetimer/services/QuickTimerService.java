@@ -6,6 +6,8 @@ import android.provider.AlarmClock;
 import android.service.quicksettings.TileService;
 import android.util.Log;
 
+import com.scottwehby.coffeetimer.Util;
+
 import androidx.preference.PreferenceManager;
 
 /**
@@ -48,15 +50,7 @@ public class QuickTimerService extends TileService {
     @Override
     public void onClick() {
         super.onClick();
-        int timerLength = PreferenceManager.getDefaultSharedPreferences(this).getInt("timer_length", 240);
-        Intent intent = new Intent(AlarmClock.ACTION_SET_TIMER)
-          .putExtra(AlarmClock.EXTRA_LENGTH, timerLength)
-          .putExtra(AlarmClock.EXTRA_SKIP_UI, true)
-          .putExtra(AlarmClock.EXTRA_MESSAGE, "Coffee Time")
-          .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        }
+        Util.startTimer(this);
     }
 
     @Override

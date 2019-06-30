@@ -20,4 +20,8 @@ public class MainActivity extends AppCompatActivity {
     public void openSettings(View view) {
         startActivity(new Intent(this, SettingsActivity.class));
     }
+
+    public void startTimer(View view) {
+        Util.startTimer(this);
+    }
 }
