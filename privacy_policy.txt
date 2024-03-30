@@ -1,0 +1,1 @@
+This app does not collect or store any data. It is a simple utility app. There are no privacy concerns.
